@@ -9,7 +9,6 @@ import { boardRoutes } from '../../common/routes';
 class IndexPage extends React.Component{
 	constructor(props){
 		super(props);
-		console.log(props);
 	}
 	state = {
 		collapsed: false,

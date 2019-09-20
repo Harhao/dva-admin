@@ -10,8 +10,11 @@ export default {
 
     },
     reducers: {
-        changeAuth(state) {
-            state.isAuth = !state.isAuth
+        setAuth(state,action) {
+           return {
+               ...state,
+               isAuth: !state.isAuth
+           }
         }
     }
 }

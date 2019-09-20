@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, Icon } from 'antd';
+import { connect } from "dva";
 function setting(){
     return (
         <Menu style={{marginTop:'5px',width:'150px'}}>
