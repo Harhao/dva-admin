@@ -1,0 +1,12 @@
+.wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.wrap .contentWrap {
+  flex: 1;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}

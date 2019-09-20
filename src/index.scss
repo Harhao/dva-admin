@@ -1,0 +1,14 @@
+html,
+body,
+:global(#root) {
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:global(.ant-menu) {
+  height: calc(100% - 50px) !important;
+}
