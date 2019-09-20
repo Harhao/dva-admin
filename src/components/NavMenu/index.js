@@ -10,8 +10,9 @@ class NavMenu extends React.Component {
   render() {
     return (
       <div style={{height:'100%',width:this.props.collapsed ? 80 : 256}}>
-        <div style={{height:'50px',backgroundColor:'#001529'}}>
-
+        <div className={styles.logoWrap}>
+          <div className={styles.logo}></div>
+          <div className={styles.logoTitle} style={{display:this.props.collapsed?'none':'block'}}>DvaJS-Admin</div>
         </div>
         <Menu
           defaultSelectedKeys={['1']}

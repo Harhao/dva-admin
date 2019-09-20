@@ -8,7 +8,6 @@ class Login extends React.Component {
                 <div className={styles.mask}></div>
                 <div className={styles.loginForm}>
                     <div className={styles.title}>DvaJS - Admin</div>
-                    
                 </div>
             </div>
         );
