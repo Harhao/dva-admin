@@ -1,13 +1,16 @@
 export default {
-    namespace:'global',
-    state:{
+    namespace: 'global',
+    state: {
         isAuth: true,
+        userInfo: {
+            name: 'admin'
+        }
     },
-    effects:{
+    effects: {
 
     },
-    reducers:{
-        changeAuth(state){
+    reducers: {
+        changeAuth(state) {
             state.isAuth = !state.isAuth
         }
     }
