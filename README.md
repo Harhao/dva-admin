@@ -1,5 +1,7 @@
 # dva-admin
 [![Build Status](https://travis-ci.com/Harhao/dva-admin.svg?branch=master)](https://travis-ci.com/Harhao/dva-admin)
+[![](https://img.shields.io/badge/License-MIT-brightgreen)](https://img.shields.io/badge/License-MIT-brightgreen)
+
 
 ### 使用方法
 
