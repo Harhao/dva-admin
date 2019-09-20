@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'dva';
+import { Route, Switch, Redirect} from 'dva/router';
 import NavMenu from "../../components/NavMenu";
 import styles from './IndexPage.scss';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import { boardRoutes } from '../../common/routes';
 class IndexPage extends React.Component{
 	state = {
 		collapsed: false,
@@ -20,14 +22,29 @@ class IndexPage extends React.Component{
 				<NavMenu collapsed={this.state.collapsed}/>
 				<div className={styles.contentWrap}>
 					<Header toggleCollapsed={this.toggleCollapsed.bind(this)} collapsed={this.state.collapsed}/>
-					<div className={styles.main}></div>
+					<div className={styles.main}>
+						{this.state.isAuth}
+						{/* <Switch>
+							{
+								boardRoutes.map(item => {
+									return (
+										this.state.isAuth?<Route path={item.path} component={item.component} key={item.key} exact/>:<Redirect to="/login" />
+									);
+								})
+							}
+						</Switch> */}
+					</div>
 					<Footer/>
 				</div>
 			</div>
 		);
 	}
 }
-IndexPage.propTypes = {
-};
 
-export default connect()(IndexPage);
+function mapStateToProps(state){
+	return {
+		isAuth : state.global.isAuth
+	}
+}
+
+export default connect(mapStateToProps)(IndexPage);

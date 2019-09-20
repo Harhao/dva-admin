@@ -2,9 +2,6 @@ import React from "react";
 import { Avatar, Badge,Icon,Menu,Dropdown} from 'antd';
 import styles from './index.scss'
 export default class Header extends React.Component{
-    constructor(props){
-        super(props);
-    }
     render(){
         const menu = (
             <Menu style={{marginTop:'8px',width:'100px'}}>

@@ -5,9 +5,6 @@ const { SubMenu } = Menu;
 const {Sider} = Layout;
 
 class NavMenu extends React.Component {
-  constructor(props){
-    super(props);
-  }
   render() {
     return (
       <Sider trigger={null} collapsible collapsed={this.props.collapsed} className={styles.menu}>

@@ -1,14 +1,16 @@
 import dva from 'dva';
 import './index.scss';
-
+import createHistory from 'history/createHashHistory';
 // 1. Initialize
-const app = dva();
+const app = dva({
+    history:createHistory()
+});
 
 // 2. Plugins
 // app.use({});
 
 // 3. Model
-// app.model(require('./models/example').default);
+app.model(require('./models/global').default);
 
 // 4. Router
 app.router(require('./router').default);

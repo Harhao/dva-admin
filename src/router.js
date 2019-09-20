@@ -1,24 +1,15 @@
 import React from 'react';
-import { Router, Route, Switch ,Redirect} from 'dva/router';
+import { Router, Route, Switch, Redirect } from 'dva/router';
 import IndexPage from "./routes/Index/IndexPage"
 import Login from "./routes/Login/Login"
+import NoMatch from "./components/NoMatch";
 function RouterConfig({ history }) {
-  const routers = [
-    {
-		path:'/dashboard',
-		component: IndexPage
-	},
-	{
-		path:'/login',
-		component: Login
-	}
-  ];
   return (
     <Router history={history}>
       <Switch>
-		{
-			routers.map((item,i) => (<Route key={i} path={item.path} component={item.component} exact/>))
-		}
+        <Route path = "/login" component={Login} key="login"/>
+        <Route path = '/' component = {IndexPage} key="dashborad"/>
+		    <Route component={NoMatch}/>
       </Switch>
     </Router>
   );
