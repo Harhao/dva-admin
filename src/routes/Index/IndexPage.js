@@ -3,6 +3,7 @@ import { connect } from 'dva';
 import NavMenu from "../../components/NavMenu";
 import styles from './IndexPage.scss';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 class IndexPage extends React.Component{
 	state = {
 		collapsed: false,
@@ -19,6 +20,8 @@ class IndexPage extends React.Component{
 				<NavMenu collapsed={this.state.collapsed}/>
 				<div className={styles.contentWrap}>
 					<Header toggleCollapsed={this.toggleCollapsed.bind(this)} collapsed={this.state.collapsed}/>
+					<div className={styles.main}></div>
+					<Footer/>
 				</div>
 			</div>
 		);

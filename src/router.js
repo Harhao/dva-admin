@@ -1,11 +1,11 @@
 import React from 'react';
-import { Router, Route, Switch } from 'dva/router';
+import { Router, Route, Switch ,Redirect} from 'dva/router';
 import IndexPage from "./routes/Index/IndexPage"
 import Login from "./routes/Login/Login"
 function RouterConfig({ history }) {
   const routers = [
     {
-		path:'/',
+		path:'/dashboard',
 		component: IndexPage
 	},
 	{
@@ -13,7 +13,6 @@ function RouterConfig({ history }) {
 		component: Login
 	}
   ];
-  console.log(routers);
   return (
     <Router history={history}>
       <Switch>

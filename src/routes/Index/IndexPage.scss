@@ -10,3 +10,7 @@
   min-height: 100vh;
   background-color: #f0f2f5;
 }
+.wrap .main{
+  flex: 1;
+  min-height: calc(100vh - 132px);
+}

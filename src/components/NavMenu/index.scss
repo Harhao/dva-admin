@@ -6,6 +6,10 @@
   margin-top: -10px;
 }
 
+.navMenu {
+  box-shadow: 2px 0 6px rgba(0, 21, 41, .35);
+}
+
 .logoWrap {
   display: flex;
   flex-direction: row;
@@ -13,19 +17,22 @@
   height: 50px;
   background-color: #001529;
 }
-.logoWrap .logo{
+
+.logoWrap .logo {
   width: 50px;
   height: 50px;
   line-height: 50px;
-  background: url(../../assets/images/logo.png) no-repeat  0;
+  background: url(../../assets/images/logo.png) no-repeat 0;
   background-size: 35px 35px;
   background-position: center center;
   margin-left: 15px;
 }
-.logoWrap .logoTitle{
+
+.logoWrap .logoTitle {
   font-size: 20px;
   color: #fff;
-  height:50px;
+  height: 50px;
   line-height: 50px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
