@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Switch, Redirect } from 'dva/router';
+import { Router, Route, Switch } from 'dva/router';
 import IndexPage from "./routes/Index/IndexPage"
 import Login from "./routes/Login/Login"
 import NoMatch from "./components/NoMatch";

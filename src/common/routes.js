@@ -1,4 +1,3 @@
-import {Switch,Route} from "dva/router";
 import Count from '../routes/Count';
 export const boardRoutes = [
     {
