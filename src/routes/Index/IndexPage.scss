@@ -6,11 +6,14 @@
 }
 
 .wrap .contentWrap {
+  position: relative;
   flex: 1;
   min-height: 100vh;
   background-color: #f0f2f5;
+  overflow: auto;
 }
 .wrap .main{
   flex: 1;
+  margin-top: 52px;
   min-height: calc(100vh - 132px);
 }
