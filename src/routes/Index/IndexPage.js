@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import { Route, Switch, Redirect} from 'dva/router';
+import { TransitionGroup,CSSTransition } from "react-transition-group";
 import NavMenu from "../../components/NavMenu";
 import styles from './IndexPage.scss';
 import Header from '../../components/Header';
@@ -26,15 +27,22 @@ class IndexPage extends React.Component{
 				<div className={styles.contentWrap}>
 					<Header toggleCollapsed={this.toggleCollapsed.bind(this)} collapsed={this.state.collapsed}/>
 					<div className={styles.main}>
-						<Switch>
-							{
-								boardRoutes.map(item => {
-									return (
-										this.props.isAuth?<Route path={item.path} component={item.component} key={item.key} exact/>:<Redirect to="/login" />
-									);
-								})
-							}
-						</Switch>
+						<TransitionGroup>
+							<CSSTransition
+								classNames="fade"
+								timeout={1000}
+							>
+								<Switch>
+									{
+										boardRoutes.map(item => {
+											return (
+												this.props.isAuth?<Route path={item.path} component={item.component} key={item.key} exact/>:<Redirect to="/login" />
+											);
+										})
+									}
+								</Switch>
+							</CSSTransition>
+						</TransitionGroup>
 					</div>
 					<Footer/>
 				</div>

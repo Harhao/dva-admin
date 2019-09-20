@@ -9,7 +9,7 @@ function RouterConfig({ history }) {
       <Switch>
         <Route path = "/login" component={Login} key="login"/>
         <Route path = '/' component = {IndexPage} key="dashborad"/>
-		    <Route component={NoMatch}/>
+		    <Route component={NoMatch} key="noMatch"/>
       </Switch>
     </Router>
   );
