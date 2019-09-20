@@ -10,7 +10,7 @@ class NavMenu extends React.Component {
   }
   render() {
     return (
-      <Sider trigger={null} collapsible collapsed={this.props.collapsed}>
+      <Sider trigger={null} collapsible collapsed={this.props.collapsed} className={styles.menu}>
         <div className={styles.logoWrap}>
           <div className={styles.logo}></div>
           <div className={styles.logoTitle} style={{display:this.props.collapsed?'none':'block'}}>DvaJS</div>
