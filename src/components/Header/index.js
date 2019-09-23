@@ -7,7 +7,6 @@ import Notice from '../Notice';
 import styles from './index.scss'
 class Header extends React.Component {
     render() {
-        console.log("##",this.props)
         const { dispatch } = this.props;
         const Settings = (
             <Menu style={{marginTop:'5px',width:'150px'}}>

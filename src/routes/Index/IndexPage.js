@@ -8,9 +8,6 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { boardRoutes } from '../../common/routes';
 class IndexPage extends React.Component{
-	constructor(props){
-		super(props);
-	}
 	state = {
 		collapsed: false,
 	};
@@ -34,9 +31,9 @@ class IndexPage extends React.Component{
 							>
 								<Switch>
 									{
-										boardRoutes.map(item => {
+										boardRoutes.map((item,index) => {
 											return (
-												this.props.isAuth?<Route path={item.path} component={item.component} key={item.key} exact/>:<Redirect to="/login" />
+												this.props.isAuth?<Route path={item.path} component={item.component} key={item.key} exact/>:<Redirect to="/login" key={index}/>
 											);
 										})
 									}
