@@ -1,13 +1,14 @@
-import service from "../../src/services/index.js"
+// import service from "../../src/services/index.js"
 export default {
     namespace:'login',
     state:{
     },
     effects:{
-        *loginSystem(){
-            
+        *loginSystem({payload},{ select,call,put}){
+            console.log("###",payload)
         }
     },
     reducers:{
+        
     }
 }

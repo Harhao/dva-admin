@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { connect } from "dva";
 import styles from './login.scss';
 class Login extends React.Component {
     handleSubmit = e => {
@@ -7,6 +8,7 @@ class Login extends React.Component {
         this.props.form.validateFields((err, values) => {
           if (!err) {
             console.log('Received values of form: ', values);
+            this.props.dispatch({type:'login/loginSystem',payload:values});
           }
         });
     };
@@ -62,4 +64,4 @@ class Login extends React.Component {
     }
 }
 const wrappLogin = Form.create({ name:'login' })(Login);
-export default wrappLogin;
+export default connect(({login}) => ({login}))(wrappLogin);
