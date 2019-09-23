@@ -1,7 +1,7 @@
 export default {
     namespace: 'global',
     state: {
-        isAuth: true,
+        isAuth: false,
         userInfo: {
             name: 'admin'
         }
